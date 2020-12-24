@@ -1,17 +1,10 @@
-This is the README for the Arvo package, version 2020/12/21.
+This is the README for the Arvo package, version 2020/12/24.
   
 This package provides LaTeX, pdfLaTeX support for the Arvo family of fonts, 
 designed by Anton Koovit: 
 Copyright (c) 2010-2013, Anton Koovit (anton@korkork.com), with Reserved Font 
 Name 'Arvo'
 
-
-To install this package on a TDS-compliant TeX system download the file 
-"tex-archive"/install/fonts/Arvo.tds.zip where the preferred URL for 
-"tex-archive" is http://mirrors.ctan.org. Unzip the archive at the root of an 
-appropriate texmf tree, likely a personal or local tree. If necessary, update 
-the file-name database (e.g., texhash). Update the font-map files by enabling 
-the Map file Arvo.map.
 
 To use, add
 
