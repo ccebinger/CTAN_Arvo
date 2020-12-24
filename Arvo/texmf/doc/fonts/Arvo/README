@@ -1,0 +1,37 @@
+This is the README for the Arvo package, version 2020/12/24.
+  
+This package provides LaTeX, pdfLaTeX support for the Arvo family of fonts, 
+designed by Anton Koovit: 
+Copyright (c) 2010-2013, Anton Koovit (anton@korkork.com), with Reserved Font 
+Name 'Arvo'
+
+
+To install this package on a TDS-compliant TeX system download the file 
+"tex-archive"/install/fonts/Arvo.tds.zip where the preferred URL for 
+"tex-archive" is http://mirrors.ctan.org. Unzip the archive at the root of an 
+appropriate texmf tree, likely a personal or local tree. If necessary, update 
+the file-name database (e.g., texhash). Update the font-map files by enabling 
+the Map file Arvo.map.
+
+To use, add
+
+     \usepackage{Arvo}
+
+to the preamble of your document. These will activate Arvo
+as the text font. 
+
+Options scaled=<number> or scale=<number> may be used to scale the fonts.
+
+
+Font encodings supported are OT1, T1, LY1.
+
+The original TrueType fonts were obtained from
+
+     https://fonts.google.com/specimen/Arvo
+
+and are licensed under the SIL Open Font License, version
+1.1; the text may be found in the doc directory. The type1
+versions were created using cfftot1. The support files were
+created using autoinst and are licensed under the terms of
+the LaTeX Project Public License. The maintainer of this
+package is Carl-Clemens Ebinger at post(at)ebinger(dot)cc.
