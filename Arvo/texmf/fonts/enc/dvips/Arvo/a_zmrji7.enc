@@ -1,7 +1,7 @@
 % THIS FILE WAS AUTOMATICALLY GENERATED -- DO NOT EDIT
 
 %%AutoEnc_zmrji7vzn237ysql425ntisraa
-% Encoding created by otftotfm on Mon Dec 21 18:35:37 2020
+% Encoding created by otftotfm on Fri Dec 25 12:10:17 2020
 % Command line follows encoding
 /AutoEnc_zmrji7vzn237ysql425ntisraa [
 %00
@@ -56,8 +56,8 @@
 % Command line: 'otftotfm --automatic --encoding=fontools_ot1
 % --tfm-directory=texmf/fonts/tfm/public/Arvo
 % --vf-directory=texmf/fonts/vf/public/Arvo
-% --truetype-directory=texmf/fonts/truetype/public/Arvo
+% --type1-directory=texmf/fonts/type1/public/Arvo
 % --encoding-directory=texmf/fonts/enc/dvips/Arvo
-% --map-file=texmf/fonts/map/dvips/Arvo/Arvo.map --no-updmap --force
-% --coding-scheme=TEX TEXT --feature=kern Arvo-BoldItalic.ttf
-% Arvo-BoldItalic-tlf-ot1'
+% --map-file=texmf/fonts/map/dvips/Arvo/ArvZero.map --no-updmap --force
+% --coding-scheme=TEX TEXT --feature=kern Arv0-BoldItalic.otf
+% Arv0-BoldItalic-tlf-ot1'

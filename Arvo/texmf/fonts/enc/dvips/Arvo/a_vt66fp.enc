@@ -1,7 +1,7 @@
 % THIS FILE WAS AUTOMATICALLY GENERATED -- DO NOT EDIT
 
 %%AutoEnc_vt66fpjnr4uemqb4n6x7dxud5e
-% Encoding created by otftotfm on Mon Dec 21 18:35:39 2020
+% Encoding created by otftotfm on Fri Dec 25 12:10:20 2020
 % Command line follows encoding
 /AutoEnc_vt66fpjnr4uemqb4n6x7dxud5e [
 %00
@@ -56,8 +56,8 @@
 % Command line: 'otftotfm --automatic --encoding=fontools_ly1
 % --tfm-directory=texmf/fonts/tfm/public/Arvo
 % --vf-directory=texmf/fonts/vf/public/Arvo
-% --truetype-directory=texmf/fonts/truetype/public/Arvo
+% --type1-directory=texmf/fonts/type1/public/Arvo
 % --encoding-directory=texmf/fonts/enc/dvips/Arvo
-% --map-file=texmf/fonts/map/dvips/Arvo/Arvo.map --no-updmap --force
+% --map-file=texmf/fonts/map/dvips/Arvo/ArvZero.map --no-updmap --force
 % --coding-scheme=TEX TYPEWRITER AND WINDOWS ANSI --feature=kern
-% Arvo-Regular.ttf Arvo-tlf-ly1'
+% Arv0-Regular.otf Arv0-tlf-ly1'

@@ -1,0 +1,50 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ArvZero}
+    [2020/12/25 (autoinst)  Style file for ArvZero fonts.]
+
+\RequirePackage{xkeyval}
+\newcommand*{\ArvZero@scale}{1}
+\DeclareOptionX{scale}{\renewcommand*{\ArvZero@scale}{#1}}
+\DeclareOptionX{scaled}{\renewcommand*{\ArvZero@scale}{#1}}
+
+\DeclareOptionX{lining}{\edef\ArvZero@figurestyle{LF}}
+\DeclareOptionX{tabular}{\edef\ArvZero@figurealign{T}}
+\DeclareOptionX{mainfont}{
+    \renewcommand{\familydefault}{\rmdefault}
+}
+\DeclareOptionX{bold}{\edef\bfseries@rm{bold}}
+\DeclareOptionX{regular}{\edef\mdseries@rm{regular}}
+\ExecuteOptionsX{lining,tabular}
+\ProcessOptionsX\relax
+
+\RequirePackage{fontenc,textcomp}
+\RequirePackage{ifthen}
+\RequirePackage{mweights}
+
+\IfFileExists{fontaxes.sty}{
+    \RequirePackage{fontaxes}
+}{}
+
+%   Here we implement the scale=MatchLowercase option.
+%   If this is given, we must compute the correct value of
+%   the "\ArvZero@scale" parameter before loading the .fd files;
+%   but to determine that value we of course need the font's x-height.
+%   To avoid triggering the loading of .fd files,
+%   we use plain TeX's \font primitive to load the testfont.
+%   We then compute the ratio of the current x-height to our font's x-height;
+%   this is the "\ArvZero@scale" we will pass to the .fd files.
+\ifthenelse{\equal{\ArvZero@scale}{MatchLowercase}}
+    {   \newlength{\ArvZero@currentx}
+        \settoheight{\ArvZero@currentx}{x}
+        \newlength{\ArvZero@xheight}
+        \settoheight{\ArvZero@xheight}
+            {{\font\testfont=Arv0-tlf-ot1 at \f@size pt\testfont x}}
+        \renewcommand*{\ArvZero@scale}
+            {\strip@pt\dimexpr\number\numexpr\number\dimexpr\ArvZero@currentx\relax*65536/\number\dimexpr\ArvZero@xheight\relax\relax sp\relax}}
+    {}
+
+\renewcommand*
+    {\rmdefault}
+    {ArvZero-\ArvZero@figurealign\ArvZero@figurestyle}
+
+\endinput
