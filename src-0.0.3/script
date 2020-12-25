@@ -1,0 +1,47 @@
+If necessary, install fontforge.
+
+ % fontforge Arvo-Regular.ttf 
+
+-> Element -> Font Info
+
+Note all the variants of the "reserved" FontName 
+in this case, just Arvo.
+
+Edit the fields as necessary. This depends on how messed up
+the font information is. In this case, change the Fontname
+Arvo to Arvo-Regular and the Name for Humans to "Arvo
+Regular".
+
+Click on OK.  In the File menu, click on Generate Fonts.
+
+Edit the desired filename as necessary, in this case
+Arvo-Regular.otf for format OpenType (CFF). Click on
+Generate. Ignore the message about em size. Quit. Don't save
+the sfd.
+
+Repeat for the other ttfs. You could use a script:
+
+  #!/usr/local/bin/fontforge -lang=py
+  from os.path import splitext
+  from sys import argv
+  import fontforge
+  for file in argv[1:]:
+      font=fontforge.open(file)
+      font.em = 1000
+      font.generate(splitext(file)[0] + ".otf")
+
+
+In an editor, open change_fontnames.py. In the CHANGES
+section, replace the quoted names in the first column by the
+"old" fontnames (Arvo) and the corresponding second column
+by a "new" name, anything other than Arvo, such as Arv.
+Delete or add rows as necessary,
+
+  % fontforge -lang=py -script change_fontnames.py *.otf
+
+You should now have 4 otfs with Arv filenames and FontNames.
+
+Use autoinst as usual on the Arv-*.otfs, but verify that
+otftotfm generates pfbs. Do not distribute the Avr-*.otfs.
+
+
